@@ -1,16 +1,33 @@
-# Bridge to Relief MVP
+# Bridge to Relief – MVP
 
-This repository contains the MVP one-page website for **Bridge to Relief**, a nonprofit in formation that provides personalized disaster relief resource navigation.
+**Purpose:** One-page MVP website to demonstrate a compassionate, AI-assisted navigator that connects Florida residents to verified disaster relief resources.
+
+## What this MVP shows
+- Clear value prop and simple flow
+- **Live chat prototype** (Anthropic Claude) that simulates resource guidance
+- **Lead capture** for individuals, partners, and funders
+- Privacy/Terms pages and basic guardrails
 
 ## Tech stack
-- Next.js (App Router, TypeScript, TailwindCSS)
-- Claude (Anthropic) for conversational AI
-- Vercel for deployment
+- **Next.js** (App Router) + **TypeScript** + **TailwindCSS**
+- **Anthropic Claude** via `@anthropic-ai/sdk`
+- Deploy target: **Vercel**
 
-## Goals
-- Show our concept to partners and funders
-- Provide a working demo chat prototype
-- Collect early pilot signups and partner leads
+## Page structure
+1. **Hero:** “Find the right disaster relief—fast.”
+2. **Value Props:** Local & verified; Simple steps; Human handoff
+3. **Live Chat (Prototype):** Demo with safety disclaimer
+4. **Join the Pilot:** Email + role form
+5. **Footer:** Privacy, Terms, Contact, nonprofit-in-formation note
 
-## Status
-🚧 Work in progress (MVP prototype phase)
+## Safety & trust (MVP guardrails)
+- Do **not** request SSN, bank info, DOB, or protected health info
+- Display disclaimers in UI and in the system prompt
+- Minimal logs for quality (no sensitive content); `.env.local` is never committed
+- Aim for accessible, mobile-first experience
+
+## Local development
+```bash
+pnpm install
+pnpm dev
+# open http://localhost:3000 (or Codespaces forwarded port)

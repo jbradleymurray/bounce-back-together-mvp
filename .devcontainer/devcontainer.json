@@ -1,0 +1,24 @@
+{
+  "name": "BTR MVP",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/pnpm:2": {}
+  },
+  "postCreateCommand": "corepack enable && pnpm -v",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-vscode",      // Claude for VS Code (official)
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.eol": "\n",
+        "typescript.tsdk": "node_modules/typescript/lib"
+      }
+    }
+  }
+}
