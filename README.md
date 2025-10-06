@@ -1,4 +1,4 @@
-# Bridge to Relief – MVP
+# Bounce Back Together – MVP
 
 **Purpose:** One-page MVP website to demonstrate a compassionate, AI-assisted navigator that connects Florida residents to verified disaster relief resources.
 
