@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bridge to Relief",
+  title: "Bounce Back Together",
   description: "Find the right disaster relief—fast.",
 };
 

@@ -16,11 +16,19 @@ export async function POST(req: NextRequest) {
       messages: { role: "user" | "assistant"; content: string }[];
     };
 
-    const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    console.log('API Key exists:', !!apiKey);
+    console.log('API Key prefix:', apiKey?.substring(0, 20));
+
+    if (!apiKey) {
+      return NextResponse.json({ error: "API key not configured" }, { status: 500 });
+    }
+
+    const client = new Anthropic({ apiKey });
     const userText = messages.map(m => `${m.role.toUpperCase()}: ${m.content}`).join("\n");
 
     const completion = await client.messages.create({
-      model: "claude-3-5-sonnet-20241022",
+      model: "claude-sonnet-4-20250514",
       max_tokens: 400,
       temperature: 0.3,
       system: SYSTEM_PROMPT,

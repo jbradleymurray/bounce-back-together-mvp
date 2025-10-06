@@ -47,12 +47,13 @@ export default function ChatPanel() {
         ))}
         {loading && <div className="text-sm text-gray-500">Thinking…</div>}
       </div>
-      <form onSubmit={onSend} className="mt-3 flex gap-2">
+      <form onSubmit={onSend} className="mt-3 flex gap-2" suppressHydrationWarning data-form-type="other">
         <input
           className="flex-1 border rounded-lg px-3 py-2"
           placeholder="Type a message…"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          data-1p-ignore
         />
         <button className="rounded-lg px-4 py-2 bg-black text-white" disabled={loading}>
           Send

@@ -1,5 +1,7 @@
 import ChatPanel from "@/components/ChatPanel";
-
+<div className="p-4 bg-red-500 text-white rounded-lg">
+  ✅ Tailwind is working!
+</div>
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -9,7 +11,7 @@ export default function Home() {
           Find the right disaster relief—fast.
         </h1>
         <p className="mt-4 text-lg md:text-xl max-w-2xl">
-          Bridge to Relief matches you to verified aid in your county—in minutes.
+          Bounce Back Together matches you to verified aid in your county—in minutes.
         </p>
         <div className="mt-8 flex gap-4">
           <a href="#demo" className="rounded-lg px-5 py-3 bg-black text-white">
@@ -52,8 +54,8 @@ export default function Home() {
       <section id="join" className="px-6 py-16 bg-gray-50">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-bold">Join the pilot</h2>
-          <form className="mt-4 grid gap-3" method="POST" action="/api/lead">
-            <input name="email" required placeholder="Email" className="border rounded-lg px-4 py-3" />
+          <form className="mt-4 grid gap-3" method="POST" action="/api/lead" suppressHydrationWarning data-form-type="other">
+            <input name="email" type="email" required placeholder="Email" className="border rounded-lg px-4 py-3" autoComplete="email" data-1p-ignore suppressHydrationWarning />
             <select name="role" className="border rounded-lg px-4 py-3">
               <option>Individual</option>
               <option>Partner organization</option>
@@ -72,7 +74,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="px-6 py-12 text-sm text-gray-600">
         <div className="max-w-5xl mx-auto flex flex-wrap gap-4">
-          <span>© {new Date().getFullYear()} Bridge to Relief (nonprofit in formation)</span>
+          <span>© {new Date().getFullYear()} Bounce Back Together (nonprofit in formation)</span>
           <a className="underline" href="/privacy">Privacy</a>
           <a className="underline" href="/terms">Terms</a>
           <a className="underline" href="mailto:hello@yourdomain.org">Contact</a>
